@@ -1,0 +1,74 @@
+[
+    {
+        "id": 1,
+        "title": "Building a To-Do App in .NET",
+        "description": "Learn how to create a powerful to-do list using C# and .NET.",
+        "image": "/3413468.jpg",
+        "tags": [
+            "C#",
+            ".NET",
+            "Backend"
+        ],
+        "content": "Big O notation is a mathematical concept used in computer science to describe the efficiency of algorithms, particularly in terms of time and space complexity. It expresses the upper bound of an algorithm's running time as input size grows, helping developers understand performance at scale. For example, an algorithm with O(n) complexity grows linearly with input size, while O(n²) grows quadratically. Big O ignores constants and lower-order terms to focus on dominant factors. It’s crucial in algorithm analysis, enabling better design choices and optimization. Understanding Big O helps programmers write faster, more efficient code that performs well with large datasets."
+    },
+    {
+        "id": 2,
+        "title": "Getting Started with React",
+        "description": "A beginner's guide to building React components effectively.",
+        "image": "/3413468.jpg",
+        "tags": [
+            "React",
+            "JavaScript",
+            "Frontend"
+        ],
+        "content": "Full blog content here..."
+    },
+    {
+        "id": 3,
+        "title": "Styling with Tailwind CSS",
+        "description": "How to style your components using utility-first CSS.",
+        "image": "/3413468.jpg",
+        "tags": [
+            "Tailwind",
+            "CSS",
+            "Design"
+        ],
+        "content": "Full blog content here..."
+    },
+    {
+        "id": 4,
+        "title": "Offline-First POS System",
+        "description": "Designing a system that works offline and syncs online later.",
+        "image": "/3413468.jpg",
+        "tags": [
+            "POS",
+            "Sync",
+            "Architecture"
+        ],
+        "content": "Full blog content here..."
+    },
+    {
+        "id": 5,
+        "title": "Gamifying Your Health App",
+        "description": "Keep users engaged with gamified nutrition tracking.",
+        "image": "/3413468.jpg",
+        "tags": [
+            "Gamification",
+            "Health",
+            "Frontend"
+        ],
+        "content": "Full blog content here..."
+    },
+    {
+        "id": 6,
+        "title": "Node.js + Express Crash Course",
+        "description": "A quick start to building APIs with Express.",
+        "image": "/3413468.jpg",
+        "tags": [
+            "Node.js",
+            "Express",
+            "API"
+        ],
+        "content": "Full blog content here..."
+    }
+]

@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+/* index.css or any global CSS file */
+
+.container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.blog-heading{
+    @apply text-5xl text-zinc-800 font-bold mb-5
+}
