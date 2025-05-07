@@ -1,28 +1,29 @@
+
 function Footer() {
     return (
         <footer className="bg-zinc-600 text-gray-300 w-full py-12 items-center">
-            <div className=" flex justify-around container">
-                <div className="flex flex-col gap-4">
-                    <p className="font-semibold">
-                        &copy; 2025 Cephard Kipkemboi. All right reserved.
+            <div className="grid sm:grid-cols-4 container">
+                <div>
+                    <p className="mb-6 text-gray-200 font-light">
+                        &copy; 2025 Cephard Kipkemboi. <br />All right reserved.
                     </p>
-                    <hr className="border-zinc-400" />
+                    <hr className="w-[90%]" />
                 </div>
-                <ul className="space-y-2 mt-2">
-                    <h1 className="font-bold">Progamming</h1>
+                <ul className="space-y-2">
+                    <h1 className="font-bold text-gray-200">Progamming</h1>
                     <li>Algorithms</li>
                     <li>Data Structures</li>
                     <li>O notation</li>
                     <li></li>
                 </ul>
-                <ul className="space-y-2 mt-2">
-                    <h1 className="font-bold">Research</h1>
+                <ul className="space-y-2">
+                    <h1 className="font-bold text-gray-200">Research</h1>
                     <li>Artificail Intelligence</li>
                     <li>Robotics</li>
                     <li>Inter disciplinary</li>
                 </ul>
-                <ul className="space-y-2 mt-2">
-                    <h1 className="font-bold">Casual Topics</h1>
+                <ul className="space-y-2">
+                    <h1 className="font-bold text-gray-200">Casual Topics</h1>
                     <li>Work related hobbies</li>
                     <li>What other developers say</li>
                 </ul>

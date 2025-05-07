@@ -8,7 +8,7 @@ function Portfolio() {
     const initialBlogs = blogs.slice(0, 3);
 
     return (
-        <div className="grid grid-cols-3 py-7 gap-x-5 gap-y-8 my-8 justify-center">
+        <div className="grid md:grid-cols-3 py-7 gap-x-5 gap-y-8 my-8 justify-center">
             {initialBlogs.map(blog => (
 
                 <Link to={`/blogpost/${blog.id}`}>

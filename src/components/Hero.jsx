@@ -8,18 +8,18 @@ function Hero() {
         <>
             <div className="h-screen min-h-screen flex flex-col items-center justify-center px-4 w-full">
 
-                <h1 className="text-8xl font-bold text-center px-4 bg-gradient-to-r from-violet-900 to-blue-600 text-transparent bg-clip-text 
+                <h1 className="text-6xl md:text-8xl font-bold text-center px-4 bg-gradient-to-r from-violet-900 to-blue-600 text-transparent bg-clip-text 
     transform transition-all duration-300 mb-12 mt-[-20px]">
-                    Delve and Explore!
+                    Develope and Explore!
                 </h1>
 
-                <div className="flex rounded-full border border-violet-200 overflow-hidden">
+                <div className="relative flex rounded-full border border-violet-200 overflow-hidden focus-within:border-violet-400 transition-colors duration-200">
                     <input
                         className="py-2 px-4 bg-transparent outline-none focus:ring-0"
                         type="text"
                         placeholder="Search blog..."
                     />
-                    <button className="bg-violet-800 w-10 m-0.5 h-10 rounded-full text-gray-50 hover:bg-violet-600 transition-colors">
+                    <button className="bg-violet-800 w-10 h-10 rounded-full text-gray-50 hover:bg-violet-600 transition-colors absolute right-0">
                         <FontAwesomeIcon icon={faChevronRight} />
                     </button>
                 </div>
