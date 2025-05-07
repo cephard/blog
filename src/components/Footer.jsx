@@ -2,7 +2,7 @@
 function Footer() {
     return (
         <footer className="bg-zinc-600 text-gray-300 w-full py-12 items-center">
-            <div className="grid sm:grid-cols-4 container">
+            <div className="grid sm:grid-cols-4 container gap-6">
                 <div>
                     <p className="mb-6 text-gray-200 font-light">
                         &copy; 2025 Cephard Kipkemboi. <br />All right reserved.

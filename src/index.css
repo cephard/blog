@@ -8,8 +8,10 @@
     margin-right: auto;
     padding-left: 1rem;
     padding-right: 1rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
 }
 
-.blog-heading{
-    @apply text-5xl text-zinc-800 font-bold mb-5
+.blog-heading {
+    @apply text-2xl text-zinc-800 font-bold mb-5 md:text-5xl
 }

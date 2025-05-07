@@ -10,9 +10,9 @@ import Layout from './components/Layout'
 function App() {
 
   return (
-    <BrowserRouter basename='/blog'>
+    <BrowserRouter basename='/blog' className='w-full'>
       <Routes>
-        <Route path="/" element={<Layout />}> 
+        <Route path="/" element={<Layout />}>
           <Route index element={<Hero />} />
           <Route path="portfolio" element={<Portfolio />} />
           <Route path="services" element={<Services />} />
