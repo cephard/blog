@@ -15,8 +15,6 @@ function BlogPost() {
                 {blog.content}
             </p>
         </div>
-
-
     )
 }
 

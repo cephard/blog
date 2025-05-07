@@ -6,6 +6,7 @@ import Services from './components/Services'
 import BlogPost from './components/BlogPost'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Layout from './components/Layout'
+import NoPage from './components/NoPage'
 
 function App() {
 
@@ -18,7 +19,7 @@ function App() {
           <Route path="services" element={<Services />} />
           <Route path="blogpost/:id" element={<BlogPost />} />
         </Route>
-        <Route path="*" element={<p>Path not resolved</p>} />
+        <Route path="*" element={<NoPage />} />
       </Routes>
     </BrowserRouter>
 
