@@ -16,9 +16,9 @@ function Navbar() {
     return (
         <nav className="fixed z-10 bg-transparent backdrop-blur py-4 w-full mx-auto">
             <div className='container max-md:w-full flex justify-between items-baseline '>
-                <img src="./setgetlogo.png" alt="Logo" className="w-10 self-center-safe" />
+                <img src="./setgetlogo.png" alt="Logo" className="h-6 self-center-safe" />
                 <ul onClick={() => setIsOpen(false)}
-                    className={`${isOpen ? 'flex' : 'hidden'} lg:gap-12 flex-col max-lg:bg-gray-400 max-lg:absolute max-lg:w-full max-lg:top-0 max-lg:left-0 justify-center items-center focus lg:flex lg:flex-row text-violet-800 font-semibold xl:bg-transparent`}>
+                    className={`${isOpen ? 'flex' : 'hidden'} lg:gap-12 flex-col max-lg:bg-gray-400 max-lg:absolute max-lg:w-full max-lg:top-0 max-lg:left-0 justify-center items-center focus lg:flex lg:flex-row text-violet-800 xl:bg-transparent`}>
                     {navItems.map((item) => (
                         <li className="hover:text-white lg:hover:text-violet-600 max-lg:py-8 max-lg:hover:bg-violet-600 max-lg:w-full transition-colors duration-200 max-lg:pl-16">
                             <Link to={item.path}>{item.label}</Link>

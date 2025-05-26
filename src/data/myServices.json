@@ -1,0 +1,22 @@
+[
+    {
+        "id": 1,
+        "name": "Optimisation",
+        "icon": "faSearch"
+    },
+    {
+        "id": 2,
+        "name": "Lightweight",
+        "icon": "faLightbulb"
+    },
+    {
+        "id": 3,
+        "name": "Modern",
+        "icon": "faClock"
+    },
+    {
+        "id": 4,
+        "name": "Minimalist",
+        "icon": "faCode"
+    }
+]
