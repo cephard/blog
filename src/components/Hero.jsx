@@ -1,12 +1,12 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
-import Portfolio from './Portfolio';
+import Blogs from './Blogs';
 import Services from './Services';
 
 function Hero() {
     return (
-        <>
-            <div className="h-screen min-h-screen flex flex-col items-center justify-center px-4 w-full">
+        <div className='flex-grow w-full'>
+            <div className="h-screen flex flex-col items-center justify-center px-4 w-full flex-grow">
 
                 <h1 className="text-6xl md:text-8xl font-bold text-center px-4 bg-gradient-to-r from-violet-900 to-blue-600 text-transparent bg-clip-text 
     transform transition-all duration-300 mb-12 mt-[-20px]">
@@ -24,9 +24,9 @@ function Hero() {
                     </button>
                 </div>
             </div>
-            <Portfolio />
+            <Blogs />
             <Services />
-        </>
+        </div>
     )
 }
 
