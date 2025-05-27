@@ -4,7 +4,7 @@ function Contact() {
             <div className="w-full">
                 <h1 className="blog-heading">Contact Me</h1>
             </div>
-            <form action="" className="h-1/2 flex flex-col justify-center gap-4 bg-transparent rounded lg:bg-gray-50 w-full lg:p-16 md:w-[70%]">
+            <form action="" className="h-1/2 flex flex-col justify-center gap-4 bg-transparent rounded-2xl lg:bg-gray-50 w-full lg:p-16 md:w-[70%] shadow-lg">
                 <h1>Name</h1>
                 <input type="text" placeholder="John Doe" className="w-full border-b px-2 py-1 text-gray-800 focus:outline-none focus:border-violet-600" />
                 <h1>Email</h1>

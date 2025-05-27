@@ -17,7 +17,7 @@ function Inspirations() {
     }
 
     return (
-        <div>
+        <div clas>
             <h1 className="blog-heading">Inspiration</h1>
             <div className="relative grid lg:grid-cols-2 w-full py-4 gap-4">
                 <div>
@@ -47,8 +47,8 @@ function Inspirations() {
                                 </span> </button>
                             ))}
                     </ul>
-                    <div className='rounded shadow-gray-40cls0 shadow-md bg-white p-4 w-full h-full flex justify-center items-center'>
-                        <span className="bg-gradient-to-r from-violet-500 to-blue-500 font-bold text-2xl bg-clip-text text-transparent drop-shadow drop-shadow-gray-200">{message}</span>
+                    <div className='rounded-2xl shadow-md bg-white p-8 w-full h-full flex text-center items-center'>
+                        <span className="bg-gradient-to-r from-violet-500 to-blue-500 font-bold text-3xl bg-clip-text text-transparent drop-shadow drop-shadow-gray-200">{message}</span>
                     </div>
                 </div>
                 <div>

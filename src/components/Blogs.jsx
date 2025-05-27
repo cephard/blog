@@ -12,7 +12,7 @@ function Blogs() {
             <div className="grid md:grid-cols-3 gap-x-5 gap-y-8 justify-center">
                 {blogs.map(blog => (
                     <Link to={`/blogpost/${blog.id}`}>
-                        <div key={blog.id} className='card border border-gray-300 shadow-gray-300 shadow-xs rounded overflow-hidden h-full  transition-all duration-300 ease-in-out hover:border-blue-300 hover:shadow-md hover:shadow-blue-300'>
+                        <div key={blog.id} className='card border border-gray-300 shadow-gray-300 shadow-md rounded-lg overflow-hidden h-full  transition-all duration-300 ease-in-out hover:border-blue-300 hover:shadow-md hover:shadow-blue-300'>
                             <img src={`./${blog.image}`} alt={blog.title} className='w-full' />
                             <div className='px-6 py-4'>
                                 <h1 className='font-bold text-xl mb-4 text-gray-600'>{blog.title}</h1>
