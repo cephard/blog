@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "name": "Curiosity",
+        "icon": "faSearch",
+        "message": "To be curious is to question uncertainities and find cause an effect"
+    },
+    {
+        "id": 2,
+        "name": "Innovation",
+        "icon": "faLightbulb",
+        "message": "Tobe innovative"
+    },
+    {
+        "id": 3,
+        "name": "Simplicity",
+        "icon": "faStream",
+        "message": ""
+    },
+    {
+        "id": 4,
+        "name": "Minimalist",
+        "icon": "faGears",
+        "message": ""
+    }
+]

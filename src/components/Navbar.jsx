@@ -9,12 +9,12 @@ function Navbar() {
     const navItems = [
         { label: 'HOME', path: '/' },
         { label: 'BLOGS', path: 'blogs' },
-        { label: 'SERVICES', path: 'services' },
+        { label: 'INSPIRATIONS', path: 'inspirations' },
         { label: 'CREATE BLOG', path: 'createblog' },
     ]
 
     return (
-        <nav className="fixed z-10 bg-transparent backdrop-blur py-4 w-full mx-auto">
+        <nav className="fixed z-10 bg-transparent backdrop-blur py-4 w-full mx-auto shadow-sm">
             <div className='container max-md:w-full flex justify-between items-baseline '>
                 <img src="./setgetlogo.png" alt="Logo" className="h-6 self-center-safe" />
                 <ul onClick={() => setIsOpen(false)}
