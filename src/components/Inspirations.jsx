@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSearch, faLightbulb, faStream, faGears } from "@fortawesome/free-solid-svg-icons"
+import { faSearch, faLightbulb, faStream, faGears, faPeopleGroup } from "@fortawesome/free-solid-svg-icons"
 import inspirations from '../data/myinspirations.json'
 
 {/**rememeber to overlay the text on the image for small screens */ }
@@ -8,12 +8,12 @@ import inspirations from '../data/myinspirations.json'
 
 function Inspirations() {
     const [activeTrait, setActiveTrait] = useState(-1);
-    const iconMap = { faSearch, faLightbulb, faGears, faStream };
-    const [message, setmessage] = useState('');
+    const iconMap = { faSearch, faLightbulb, faPeopleGroup, faStream };
+    const [message, setmessage] = useState('Writing code is expensive consider designing first!');
 
-    const updateInspiration = (serviceId, serviceMessage) => {
-        setActiveTrait(serviceId);
-        setmessage(serviceMessage)
+    const updateInspiration = (inspirationId, inspirationMessage) => {
+        setActiveTrait(inspirationId);
+        setmessage(inspirationMessage)
     }
 
     return (
@@ -36,19 +36,19 @@ function Inspirations() {
                     <ul className="w-full top-[-10%] lg:absolute space-y-5 md:text-xl text-zinc-600 flex justify-around gap-4
                 max-md:grid max-md:grid-cols-2 max-md:py-4">
                         {inspirations.map(
-                            service => (<li
-                                key={service.id} className={`${activeTrait === service.id ? 'bg-blue-400 text-white' : ''} 
-                                h-full text-base rounded border border-blue-400 p-2 shadow-md flex items-center flex-col justify-center gap-2 hover:scale-110
-                                hover:bg-violet-500 hover:text-white transition-transform duration-1000`}
-                                onClick={() => updateInspiration(service.id, service.message)}>
-                                <FontAwesomeIcon className="text-2xl bold" icon={iconMap[service.icon]} />
+                            inspiration => (<button
+                                key={inspiration.id} className={`${activeTrait === inspiration.id ? 'bg-blue-400 text-white' : ''} 
+                                h-full text-base rounded border border-blue-400 p-2 shadow-md flex items-center flex-col justify-center gap-2 hover:scale-105
+                                hover:bg-violet-500 hover:text-white transition-transform duration-700`}
+                                onClick={() => updateInspiration(inspiration.id, inspiration.message)}>
+                                <FontAwesomeIcon className="text-2xl bold" icon={iconMap[inspiration.icon]} />
                                 <span className="text-center">
-                                    {service.name}
-                                </span> </li>
+                                    {inspiration.name}
+                                </span> </button>
                             ))}
                     </ul>
-                    <div className='rounded shadow-gray-400 shadow-md bg-white p-4 w-full h-full flex justify-center items-center'>
-                        <span>{message}</span>
+                    <div className='rounded shadow-gray-40cls0 shadow-md bg-white p-4 w-full h-full flex justify-center items-center'>
+                        <span className="bg-gradient-to-r from-violet-500 to-blue-500 font-bold text-2xl bg-clip-text text-transparent drop-shadow drop-shadow-gray-200">{message}</span>
                     </div>
                 </div>
                 <div>

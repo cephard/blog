@@ -2,10 +2,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import Blogs from './Blogs';
 import Inspirations from './Inspirations';
+import Contact from './Contact';
 
 function Hero() {
     return (
-        <div className='w-full'>
+        <div className='w-full grid gap-8'>
             <div className="h-[80vh] flex flex-col items-center justify-center px-4 w-full flex-grow">
 
                 <h1 className="text-6xl md:text-8xl font-bold text-center px-4 bg-gradient-to-r from-violet-900 to-blue-600 text-transparent bg-clip-text 
@@ -27,6 +28,7 @@ function Hero() {
             </div>
             <Blogs />
             <Inspirations />
+            <Contact />
         </div>
     )
 }

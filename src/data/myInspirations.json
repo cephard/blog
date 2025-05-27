@@ -9,18 +9,18 @@
         "id": 2,
         "name": "Innovation",
         "icon": "faLightbulb",
-        "message": "Tobe innovative"
+        "message": "We strive to invent and build from uncertainity but from our immagination"
     },
     {
         "id": 3,
         "name": "Simplicity",
         "icon": "faStream",
-        "message": ""
+        "message": "We don not need to over engineer, instead we solve problems with our inventions"
     },
     {
         "id": 4,
-        "name": "Minimalist",
-        "icon": "faGears",
-        "message": ""
+        "name": "Cohession",
+        "icon": "faPeopleGroup",
+        "message": "No man is an island so we join forces and a work hand in hand as a community"
     }
 ]
