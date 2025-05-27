@@ -48,7 +48,7 @@ function Inspirations() {
                             ))}
                     </ul>
                     <div className='rounded-2xl shadow-md bg-white p-8 w-full h-full flex text-center items-center'>
-                        <span className="bg-gradient-to-r from-violet-500 to-blue-500 font-bold text-3xl bg-clip-text text-transparent drop-shadow drop-shadow-gray-200">{message}</span>
+                        <span className="bg-gradient-to-r from-violet-500 to-blue-500 font-bold text-2xl bg-clip-text text-transparent drop-shadow drop-shadow-gray-200">{message}</span>
                     </div>
                 </div>
                 <div>
