@@ -2,14 +2,14 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import blogs from '../data/blogs.json'
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router';
+import SectionHeading from './SectionHeading';
 
 function Blogs() {
     return (
-        <>
-            <div className="w-full">
-                <h1 className="blog-heading">Blogs</h1>
-            </div>
-            <div className="grid md:grid-cols-3 gap-x-5 gap-y-8 justify-center">
+        <section>
+            <SectionHeading heading="Blogs" />
+
+            <div className="grid md:grid-cols-3 gap-x-4 gap-y-8 justify-center">
                 {blogs.map(blog => (
                     <Link to={`/blogpost/${blog.id}`}>
                         <div key={blog.id} className='card border border-gray-300 shadow-gray-300 shadow-md rounded-lg overflow-hidden h-full  transition-all duration-300 ease-in-out hover:border-blue-300 hover:shadow-md hover:shadow-blue-300'>
@@ -33,7 +33,7 @@ function Blogs() {
                     <FontAwesomeIcon className='flex' icon={faArrowRight} />
                 </a></div>
             </div >
-        </>
+        </section>
     )
 }
 

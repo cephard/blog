@@ -1,17 +1,16 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faPhone, faEnvelope, faHouse } from "@fortawesome/free-solid-svg-icons"
+import SectionHeading from "./SectionHeading";
 
 function Contact() {
     return (
-        <section className="w-full flex flex-col gap-8 items-center justify-around relative">
-            <div className="w-full">
-                <h1 className="blog-heading">Contact Me</h1>
-            </div>
+        <section className="w-full flex flex-col gap-4 items-center justify-around relative">
+            <SectionHeading heading="Contact Me" />
             <div className="flex flex-col h-1/2 bg-transparent rounded-2xl lg:bg-gray-50 w-full lg:p-16 md:w-[70%] lg:shadow-lg justify-between">
-                <div className="flex justify-between w-full p-8 border rounded text-lg shadow-md">
-                    <span>< FontAwesomeIcon icon={faPhone} /></span>
-                    <span>< FontAwesomeIcon icon={faHouse} /></span>
-                    <span>< FontAwesomeIcon icon={faEnvelope} /></span>
+                <div className="flex max-md:flex-col max-md:space-y-3 lg:justify-between w-full p-8 border rounded shadow-md">
+                    <span className="flex items-center gap-3">< FontAwesomeIcon icon={faPhone} />07979474451</span>
+                    <span className="flex items-center gap-3">< FontAwesomeIcon icon={faHouse} />SA1 3AN</span>
+                    <span className="flex items-center gap-3">< FontAwesomeIcon icon={faEnvelope} />cephkip@gmail.com</span>
                 </div>
                 <form action="" className="flex flex-col w-full justify-center gap-4 p-8">
                     <h1>Name</h1>
@@ -25,7 +24,7 @@ function Contact() {
             </div>
 
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19814.99356019577!2d-3.9685963984808597!3d51.62551364775827!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x486e45555a4e97b1%3A0x3d77128e2fe7cb74!2sSwansea!5e0!3m2!1sen!2suk!4v1746789844610!5m2!1sen!2suk"
-                className="w-screen h-[80vh] mt-8"></iframe>
+                className="w-full h-[80vh] mt-8 shadow-lg"></iframe>
         </section>
     )
 }

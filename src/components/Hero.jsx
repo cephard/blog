@@ -7,13 +7,12 @@ import Contact from './Contact';
 function Hero() {
     return (
         <div className='w-full flex flex-col space-y-9'>
-            <div className="h-[80vh] flex flex-col items-center justify-center px-4 w-full flex-grow">
-                <h1 className="text-6xl md:text-8xl font-bold text-center px-4 bg-gradient-to-r from-violet-900 to-blue-600 text-transparent bg-clip-text 
-    transform transition-all duration-300 mb-12 mt-[-20px]">
+            <div className="h-[80vh] flex flex-col space-y-8 items-center justify-center text-center p-8 w-full flex-grow">
+                <h1 className="text-6xl md:text-8xl font-bold px-4 bg-gradient-to-r from-violet-900 to-blue-600 text-transparent bg-clip-text 
+    transform transition-all duration-300">
                     Develope and Explore!
                 </h1>
-                <p className='font-light mb-4'>Be inspired by the words of a developer that never quits trying.</p>
-
+                <p className='font-light px-4'>Be inspired by the words of a developer that never quits trying.</p>
                 <div className="relative flex rounded-full border border-violet-200 overflow-hidden focus-within:border-violet-400 transition-colors duration-200">
                     <input
                         className="py-2 px-4 bg-transparent outline-none focus:ring-0"
