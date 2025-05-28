@@ -1,4 +1,5 @@
 import { useState } from "react";
+import FeaturedImage from "./FeaturedImage";
 
 function CreateBlog() {
     const [paragraphs, setParagraphs] = useState([]);
@@ -124,13 +125,7 @@ function CreateBlog() {
                             />
                         </div>
                     </div>
-
-                    <div className="bg-white rounded border border-gray-300 p-4">
-                        <h1 className="text-lg font-semibold mb-2">Featured Image</h1>
-                        <div className="border-2 border-dashed border-gray-300 rounded flex items-center justify-center h-48">
-                            <span className="text-gray-500">Upload Image</span>
-                        </div>
-                    </div>
+                    <FeaturedImage />
                 </div>
             </div>
         </div>
