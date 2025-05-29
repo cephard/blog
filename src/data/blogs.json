@@ -3,7 +3,7 @@
         "id": 1,
         "title": "My Programming Journey",
         "description": "Learn how to create a powerful to-do list using C# and .NET.",
-        "image": "3413468.jpg",
+        "image": "https://res.cloudinary.com/diisjfj96/image/upload/v1748537503/docs/models-2.jpg",
         "tags": [
             "C#",
             ".NET",
@@ -15,7 +15,7 @@
         "id": 2,
         "title": "Getting Started with React",
         "description": "A beginner's guide to building React components effectively.",
-        "image": "3413468.jpg",
+        "image": "https://res.cloudinary.com/diisjfj96/image/upload/v1748537503/docs/models-2.jpg",
         "tags": [
             "React",
             "JavaScript",

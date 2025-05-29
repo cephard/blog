@@ -15,14 +15,14 @@ function Navbar() {
 
     return (
         <nav className="fixed z-10 bg-transparent backdrop-blur py-4 w-full mx-auto shadow-sm">
-            <div className='container max-md:w-full flex justify-between items-baseline '>
+            <div className='container max-md:w-full flex items-center justify-between'>
                 <Link to="/">
                     <img src="./setgetlogo.png" alt="Logo" className="h-6 self-center-safe" />
                 </Link>
                 <ul onClick={() => setIsOpen(false)}
-                    className={`${isOpen ? 'flex' : 'hidden'} lg:gap-12 flex-col max-lg:bg-gray-400 max-lg:absolute max-lg:w-full max-lg:top-0 max-lg:left-0 justify-center items-center focus lg:flex lg:flex-row text-violet-800 xl:bg-transparent`}>
+                    className={`${isOpen ? 'flex max-lg:h-[50vh] max-lg:bg-white max-lg:shadow-sm max-lg:absolute max-lg:w-full max-lg:top-0 max-lg:left-0' : 'hidden'} lg:gap-12 flex-col  justify-center items-center focus lg:flex lg:flex-row text-violet-800 xl:bg-transparent`}>
                     {navItems.map((item) => (
-                        <li className="hover:text-white lg:hover:text-violet-600 max-lg:py-8 max-lg:hover:bg-violet-600 max-lg:w-full transition-colors duration-200 max-lg:pl-16">
+                        <li key={item.label} className="hover:text-white lg:hover:text-violet-600 max-lg:py-8 max-lg:hover:bg-violet-600 max-lg:w-full transition-colors duration-200 max-lg:pl-16">
                             <Link to={item.path}>{item.label}</Link>
                         </li>
                     ))}

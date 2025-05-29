@@ -10,7 +10,7 @@ function BlogPost() {
     return (
         <div>
             <h1 className='blog-heading'>{blog.title}</h1>
-            <img src={`./${blog.image}`} alt={blog.title} className="w-full max-h-[600px] object-cover rounded-lg mb-6" />
+            <img src={`${blog.image}`} alt={blog.title} className="w-full max-h-[600px] object-cover rounded-lg mb-6" />
             <p className='base-text'>
                 {blog.content}
             </p>
