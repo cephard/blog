@@ -20,21 +20,15 @@ function Blogs() {
     const image = cloudinary.image('docs/models');
     image.resize(fill().width(250).height(250));
 
-
-
     return (
         <section>
             <SectionHeading heading="Blogs" />
-
             <AdvancedImage cldImg={{ image }} />
-
-
-
             <div className="grid md:grid-cols-3 gap-x-4 gap-y-8 justify-center">
                 {blogs.map(blog => (
                     <Link to={`/blogpost/${blog.id}`}>
                         <div key={blog.id} className='card border border-gray-300 shadow-gray-300 shadow-md rounded-lg overflow-hidden h-full  transition-all duration-300 ease-in-out hover:border-blue-300 hover:shadow-md hover:shadow-blue-300'>
-                            <img src={`${blog.image}`} alt={blog.title} className='w-full' />
+                            <img src={`${blog.image}`} alt={blog.title} className='w-full h-64 object-cover' />
                             <div className='px-6 py-4'>
                                 <h1 className='font-bold text-xl mb-4 text-gray-600'>{blog.title}</h1>
                                 <p className='text-gray-500'>{blog.description}</p>

@@ -15,7 +15,7 @@
         "id": 2,
         "title": "Getting Started with React",
         "description": "A beginner's guide to building React components effectively.",
-        "image": "https://res.cloudinary.com/diisjfj96/image/upload/v1748537503/docs/models-2.jpg",
+        "image": "https://res.cloudinary.com/diisjfj96/image/upload/v1748536900/cld-sample-5.jpg",
         "tags": [
             "React",
             "JavaScript",
@@ -27,7 +27,7 @@
         "id": 3,
         "title": "Styling with Tailwind CSS",
         "description": "How to style your components using utility-first CSS.",
-        "image": "3413468.jpg",
+        "image": "https://res.cloudinary.com/diisjfj96/image/upload/v1748536899/samples/dessert-on-a-plate.jpg",
         "tags": [
             "Tailwind",
             "CSS",
@@ -39,7 +39,7 @@
         "id": 4,
         "title": "Offline-First POS System",
         "description": "Designing a system that works offline and syncs online later.",
-        "image": "3413468.jpg",
+        "image": "https://res.cloudinary.com/diisjfj96/image/upload/v1748536898/samples/coffee.jpg",
         "tags": [
             "POS",
             "Sync",
@@ -51,7 +51,7 @@
         "id": 5,
         "title": "Gamifying Your Health App",
         "description": "Keep users engaged with gamified nutrition tracking.",
-        "image": "3413468.jpg",
+        "image": "https://res.cloudinary.com/diisjfj96/image/upload/v1748536897/samples/shoe.jpg",
         "tags": [
             "Gamification",
             "Health",
@@ -63,7 +63,7 @@
         "id": 6,
         "title": "Node.js + Express Crash Course",
         "description": "A quick start to building APIs with Express.",
-        "image": "3413468.jpg",
+        "image": "https://res.cloudinary.com/diisjfj96/image/upload/v1748536898/samples/cup-on-a-table.jpg",
         "tags": [
             "Node.js",
             "Express",

@@ -1,18 +1,38 @@
 import { useState, useEffect } from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCloudArrowUp } from "@fortawesome/free-solid-svg-icons";
+import { data } from "autoprefixer";
 
 
 function FeaturedImage() {
 
     const [imageUrl, setImageUrl] = useState('./setgetlogo.png');
-
-    useEffect(() => { }, [imageUrl])
+    const [selectedImage, setSelectedImage] = useState(null);
 
     const getImagePath = (event) => {
         const image = event.target.files[0];
+        if (!image) return;
         const fileUrl = URL.createObjectURL(image)
         setImageUrl(fileUrl);
+        setSelectedImage(image);
+    }
+
+    const uploadImage = async () => {
+        if (!selectedImage) return;
+
+        const cloudImage = new FormData()
+        cloudImage.append("file", selectedImage)
+        cloudImage.append("upload_preset", "ml_default")
+        cloudImage.append("cloud_name", "diisjfj96")
+
+        const response = await fetch("https://api.cloudinary.com/v1_1/diisjfj96/image/upload",
+            {
+                method: "POST",
+                body: cloudImage
+            })
+
+        const uploadImage = await response.json()
+        console.log(uploadImage)
     }
 
     return (
@@ -28,6 +48,9 @@ function FeaturedImage() {
                         onChange={getImagePath}
                         className="hidden" />
                 </label>
+
+                <button onClick={uploadImage}
+                    className="bg-gray-600 ">Upload</button>
 
             </div>
         </div>
