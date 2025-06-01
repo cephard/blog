@@ -6,7 +6,7 @@ import { data } from "autoprefixer";
 
 function FeaturedImage() {
 
-    const [imageUrl, setImageUrl] = useState('./setgetlogo.png');
+    const [imageUrl, setImageUrl] = useState('');
     const [selectedImage, setSelectedImage] = useState(null);
 
     const getImagePath = (event) => {
@@ -38,7 +38,7 @@ function FeaturedImage() {
     return (
         <div className=".featured-image-bg bg-white rounded border border-gray-300 p-4"
             style={{ backgroundImage: `url(${imageUrl})` }}>
-            <h3>Upload Image</h3>
+            <h1 className="text-lg font-semibold mb-2">Image</h1>
             <div className="p-4 border border-dashed rounded-lg hover:border-violet-600">
                 <label htmlFor="imageUpload"
                     className="w-full flex flex-col items-center justify-center hover:bg-gray-100 duration-300 transition-all text-gray-500 rounded p-4 hover:text-violet-600">
@@ -48,10 +48,6 @@ function FeaturedImage() {
                         onChange={getImagePath}
                         className="hidden" />
                 </label>
-
-                <button onClick={uploadImage}
-                    className="bg-gray-600 ">Upload</button>
-
             </div>
         </div>
     )

@@ -12,7 +12,13 @@ function WriteParagraph() {
         }, 1000)
         return () => clearTimeout(timer);
     }, [activeParagragh]
-    )
+    );
+
+    //replaces \n from text area to html br tag
+    const formatTextWithLineBreaks = (str) => {
+        return str.replace(/\n/g, "<br />");
+    };
+
 
     return (
         <div className="grid gap-4">
@@ -21,7 +27,7 @@ function WriteParagraph() {
          * Component that diplays each paragrph of a blog post 
          */}
             <div className="bg-white shadow rounded border-gray-300 p-4">
-                <p>{paragraph} </p>
+                <p dangerouslySetInnerHTML={{ __html: formatTextWithLineBreaks(paragraph) }} /> {/**Formats plain text to html */}
                 <div className="py-2 flex justify-end">
                     <MinimalButton name="Edit" primary="text-violet-600" bg="bg-violet-50 " />
                     <MinimalButton name="Delete" primary="text-red-600" bg="bg-red-50"
