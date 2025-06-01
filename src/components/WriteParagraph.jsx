@@ -27,7 +27,8 @@ function WriteParagraph() {
          * Component that diplays each paragrph of a blog post 
          */}
             <div className="bg-white shadow rounded border-gray-300 p-4">
-                <p dangerouslySetInnerHTML={{ __html: formatTextWithLineBreaks(paragraph) }} /> {/**Formats plain text to html */}
+                <span className="whitespace-pre-wrap break-all"
+                    dangerouslySetInnerHTML={{ __html: formatTextWithLineBreaks(paragraph) }} ></span> {/**Formats plain text to html */}
                 <div className="py-2 flex justify-end">
                     <MinimalButton name="Edit" primary="text-violet-600" bg="bg-violet-50 " />
                     <MinimalButton name="Delete" primary="text-red-600" bg="bg-red-50"

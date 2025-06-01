@@ -5,11 +5,11 @@ import SectionHeading from "./SectionHeading";
 
 function CreateBlog() {
     return (
-        <div className="w-full py-16">
+        <section>
             <SectionHeading heading="Create a New Blog" />
             <div className="grid xl:grid-cols-12 gap-6">
                 {/* Editor Column */}
-                <div className="xl:col-span-8 grid gap-6">
+                <div className="xl:col-span-8 space-y-6">
                     <h1 className="text-lg font-semibold">Draft Blog</h1>
                     <WriteParagraph />
                 </div>
@@ -18,7 +18,7 @@ function CreateBlog() {
                 <div className="xl:col-span-4 space-y-6">
                     <h1 className="text-lg font-semibold">Assets</h1>
 
-                    <div className="bg-white rounded border border-gray-300 p-4">
+                    <div className="bg-white rounded border shadow border-gray-300 p-4">
                         <h1 className="text-lg font-semibold mb-2">Tags</h1>
                         <div className="flex gap-2">
                             <input
@@ -31,7 +31,7 @@ function CreateBlog() {
                     <FeaturedImage />
                 </div>
             </div>
-        </div>
+        </section>
     );
 }
 
