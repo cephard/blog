@@ -3,9 +3,9 @@ function Footer() {
     return (
         <footer className="text-gray-800 w-full py-12 items-center font-light container">
             <hr className="mb-8 w-full" />
-            <div className="grid sm:grid-cols-4 gap-6">
+            <div className="max-lg:flex max-lg:flex-col-reverse grid sm:grid-cols-4 gap-6">
                 <div>
-                    <p className="mb-6 font-light">
+                    <p className="mb-6 font-light text-sm max-lg:text-center">
                         &copy; 2025 Cephard Kipkemboi. <br />All right reserved.
                     </p>
                     <hr className="w-[90%]" />

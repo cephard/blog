@@ -1,5 +1,6 @@
 import { useState } from "react";
 import FeaturedImage from "./FeaturedImage";
+import WriteParagraph from "./WriteParagraph";
 
 function CreateBlog() {
     const [paragraphs, setParagraphs] = useState([]);
@@ -33,6 +34,9 @@ function CreateBlog() {
 
     return (
         <div className="w-full py-16">
+
+
+
             <h1 className="text-xl font-bold mb-4">Create a New Blog</h1>
             <div className="grid xl:grid-cols-12 gap-6">
                 {/* Editor Column */}
@@ -88,6 +92,7 @@ function CreateBlog() {
                             )}
                         </div>
                     ))}
+                    <WriteParagraph />
 
                     <div className="bg-white rounded border border-gray-300 p-4">
                         <h1 className="text-lg font-semibold mb-2">Write Paragraph</h1>
