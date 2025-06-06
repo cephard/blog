@@ -5,6 +5,7 @@ import Inspirations from './Inspirations';
 import Contact from './Contact';
 
 function Hero() {
+
     return (
         <div className='w-full flex flex-col space-y-9'>
             <div className="h-[80vh] flex flex-col space-y-8 items-center justify-center text-center p-8 w-full flex-grow">
