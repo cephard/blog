@@ -10,7 +10,6 @@ function BlogPost() {
     const [blog, setBlog] = useState(currentBlog)
     const [error, setError] = useState(null);
 
-
     useEffect(() => {
         if (!blog) {
             axios.get(`${baseUrl}/blogposts/${id}`)
@@ -23,7 +22,8 @@ function BlogPost() {
         }
     }, [blog, baseUrl, id]);
 
-    if (!blog) return <div> Blog Not Found!</div>
+    if (!blog) return <div> Blog Not Found!</div>;
+    if (error) return <div className='text-red-500 text-2xl p-4 flex w-full justify-center'>Error : {error}</div>;
 
     return (
         <div>

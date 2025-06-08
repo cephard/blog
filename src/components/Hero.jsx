@@ -3,8 +3,18 @@ import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import Blogs from './Blogs';
 import Inspirations from './Inspirations';
 import Contact from './Contact';
+import { useState, useEffect } from 'react';
+import axios from 'axios';
 
 function Hero() {
+    const baseUrl = import.meta.env.VITE_API_BASE_URL;
+    const [title, setTitle] = useState("");
+    const [foundBlogs, setFoundBlogs] = useState([]);
+
+    useEffect(() => {
+        axios.get(`${baseUrl}/blogposts/${title}`)
+            .then(foundBlogs => setFoundBlogs(foundBlogs.data));
+    }, [title])
 
     return (
         <div className='w-full flex flex-col space-y-9'>
@@ -19,13 +29,20 @@ function Hero() {
                         className="py-2 px-4 bg-transparent outline-none focus:ring-0"
                         type="text"
                         placeholder="Search blog..."
+                        onChange={(event) => {
+                            setTitle(event.target.value);
+                        }}
                     />
-                    <button className="bg-violet-800 w-10 h-10 rounded-full text-gray-50 hover:bg-violet-600 transition-colors absolute right-0">
+                    <button className="bg-violet-800 w-10 h-10 rounded-full text-gray-50 hover:bg-violet-600 transition-colors absolute right-0"
+                        onClick={() => {
+                            axios.get(`${baseUrl}/blogposts/${title}`)
+                                .then(foundBlogs => setFoundBlogs(foundBlogs.data));
+                        }}>
                         <FontAwesomeIcon icon={faChevronRight} />
                     </button>
-                </div>
+                </div >
             </div>
-            <Blogs />
+            <Blogs foundBlogs={foundBlogs} />
             <Inspirations />
             <Contact />
         </div>

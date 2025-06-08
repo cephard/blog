@@ -1,11 +1,11 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { faArrowRight, faSpinner } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router';
 import SectionHeading from './SectionHeading';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 
-function Blogs() {
+function Blogs({ foundBlogs }) {
 
     const baseUrl = import.meta.env.VITE_API_BASE_URL;
     const [blogs, setBlogs] = useState([]);
@@ -13,20 +13,29 @@ function Blogs() {
     const [error, setError] = useState(null);
 
 
-    //getting data from mongodb through the asp.net core api using anxios
-    useEffect(() => {
-        axios.get(`${baseUrl}/blogposts`)
-            .then(result => {
-                setBlogs(result.data);
-                setLoading(false);
-            })
-            .catch(error => {
-                setError(error.message);
-                setLoading(false);
-            });
-    }, []);
+    //getting data from mongodb through the asp.net core api using anxios data is received as json
 
-    if (loading) return <p>Loading...</p>;
+    useEffect(() => {
+        if (foundBlogs && foundBlogs.length > 0) {
+            setBlogs(foundBlogs);
+            setLoading(false);
+        } else {
+            axios.get(`${baseUrl}/blogposts`)
+                .then(result => {
+                    setBlogs(result.data);
+                    setLoading(false);
+                })
+                .catch(error => {
+                    setError(error.message);
+                    setLoading(false);
+                });
+        }
+    }, [foundBlogs]);
+
+    if (loading) return <>
+        <p>Loading...</p>
+        <FontAwesomeIcon className='animate-spin' icon={faSpinner} />
+    </>;
     if (error) return <div className='text-red-500 text-2xl p-4 flex w-full justify-center'>Error : {error}</div>;
 
     return (

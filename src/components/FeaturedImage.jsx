@@ -1,12 +1,11 @@
 import { useState, useEffect } from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCloudArrowUp } from "@fortawesome/free-solid-svg-icons";
-import { data } from "autoprefixer";
+import axios from "axios";
 
+function FeaturedImage({ changeImageURL }) {
 
-function FeaturedImage() {
-
-    const [imageUrl, setImageUrl] = useState('');
+    const [imageUrl, setImageUrl] = useState('imageURL');
     const [selectedImage, setSelectedImage] = useState(null);
 
     const getImagePath = (event) => {

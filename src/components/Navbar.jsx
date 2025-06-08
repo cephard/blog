@@ -20,11 +20,13 @@ function Navbar() {
                     <img src="./setgetlogo.png" alt="Logo" className="h-6 self-center-safe" />
                 </Link>
                 <ul onClick={() => setIsOpen(false)}
-                    className={`${isOpen ? 'flex max-lg:h-[50vh] max-lg:bg-white max-lg:shadow-sm max-lg:absolute max-lg:w-full max-lg:top-0 max-lg:left-0' : 'hidden'} lg:gap-12 flex-col  justify-center items-center focus lg:flex lg:flex-row text-violet-800 xl:bg-transparent`}>
+                    className={`${isOpen ? 'flex max-lg:h-sce max-lg:bg-white max-lg:shadow-sm max-lg:absolute max-lg:w-full max-lg:top-0 max-lg:left-0' : 'hidden'} lg:gap-12 flex-col  justify-center items-center focus lg:flex lg:flex-row text-violet-800 xl:bg-transparent`}>
                     {navItems.map((item) => (
-                        <li key={item.label} className="hover:text-white lg:hover:text-violet-600 max-lg:py-8 max-lg:hover:bg-violet-600 max-lg:w-full transition-colors duration-200 max-lg:pl-16">
-                            <Link to={item.path}>{item.label}</Link>
-                        </li>
+                        <Link to={item.path} key={item.label}
+                            className="hover:text-white lg:hover:text-violet-600 max-lg:py-8 max-lg:hover:bg-violet-600 max-lg:w-full transition-all duration-300 max-lg:px-16">
+                            {item.label}
+                            {<hr className='xl:hidden' />}
+                        </Link>
                     ))}
 
                 </ul>
