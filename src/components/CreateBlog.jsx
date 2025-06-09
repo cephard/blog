@@ -11,15 +11,13 @@ function CreateBlog() {
     const [imageURL, setImageURL] = useState('imageURL');
     const [tags, setTags] = useState([]);
     const [content, setContent] = useState('content');
+    const [errorText, setErrorText] = useState();
     const baseUrl = import.meta.env.VITE_API_BASE_URL;
 
     return (
         <form>
-            <p>
-                {title}, {description},{imageURL}, {tags.map(tag=><p>{tag}</p>)}, {content}
-            </p>
-
             <SectionHeading heading="Create a New Blog" />
+            <div className="flex items-center justify-center text-2xl text-red-500 bg-white rounded shadow-xl  h-40">{errorText}</div>
             <div className="grid xl:grid-cols-12 gap-6">
                 {/* Editor Column */}
                 <div className="xl:col-span-8 space-y-6">
@@ -29,8 +27,8 @@ function CreateBlog() {
                 {/* Sidebar Column */}
                 <div className="xl:col-span-4 space-y-6">
                     <h1 className="text-lg font-semibold">Assets</h1>
-                    <BlogDetails changeTitle={setTitle} changeDescription={setDescription} changeTags={setTags} />
-                    <FeaturedImage />
+                    <BlogDetails changeTitle={setTitle} changeDescription={setDescription} changeTags={setTags} changeErrorText={setErrorText} />
+                    <FeaturedImage changeImageURL={setImageURL} />
                 </div>
             </div>
             <div className="flex w-full p-4 mt-4 items-center justify-center">
