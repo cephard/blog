@@ -4,6 +4,7 @@ import SectionHeading from "./SectionHeading";
 import BlogDetails from "./BlogDetails";
 import { useState } from "react";
 import axios from "axios";
+import PopUpWindow from "./PopUpWindow";
 
 function CreateBlog() {
     const [title, setTitle] = useState('title');
@@ -16,8 +17,8 @@ function CreateBlog() {
 
     return (
         <form>
+            <PopUpWindow />
             <SectionHeading heading="Create a New Blog" />
-            <div className="flex items-center justify-center text-2xl text-red-500 bg-white rounded shadow-xl  h-40">{errorText}</div>
             <div className="grid xl:grid-cols-12 gap-6">
                 {/* Editor Column */}
                 <div className="xl:col-span-8 space-y-6">
