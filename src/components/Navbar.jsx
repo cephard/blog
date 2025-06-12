@@ -16,8 +16,11 @@ function Navbar() {
     return (
         <nav className="fixed z-10 bg-transparent backdrop-blur py-4 w-full mx-auto shadow-sm">
             <div className='container max-md:w-full flex items-center justify-between'>
-                <Link to="/">
-                    <img src="./setgetlogo.png" alt="Logo" className="h-6 self-center-safe" />
+                <Link to="/" className='flex text-xl sm:text-2xl md:text-3xl font-bold'>
+                    {/**
+                     * <img src="./setgetlogo.png" alt="Logo" className="h-6 self-center-safe" />
+                     */}
+                    <h1 className=''>Bonga</h1><h1 className='text-blue-600'>bits.</h1>
                 </Link>
                 <ul onClick={() => setIsOpen(false)}
                     className={`${isOpen ? 'flex max-lg:h-sce max-lg:bg-white max-lg:shadow-sm max-lg:absolute max-lg:w-full max-lg:top-0 max-lg:left-0' : 'hidden'} lg:gap-12 flex-col  justify-center items-center focus lg:flex lg:flex-row text-violet-800 xl:bg-transparent`}>
