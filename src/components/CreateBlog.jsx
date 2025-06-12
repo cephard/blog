@@ -12,12 +12,12 @@ function CreateBlog() {
     const [imageURL, setImageURL] = useState('imageURL');
     const [tags, setTags] = useState([]);
     const [content, setContent] = useState('content');
-    const [errorText, setErrorText] = useState();
+    const [errorText, setErrorText] = useState(null);
     const baseUrl = import.meta.env.VITE_API_BASE_URL;
 
     return (
         <form>
-            <PopUpWindow />
+            <PopUpWindow errorText={errorText} />
             <SectionHeading heading="Create a New Blog" />
             <div className="grid xl:grid-cols-12 gap-6">
                 {/* Editor Column */}
