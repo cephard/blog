@@ -2,21 +2,19 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
 import { useState, useEffect } from "react";
 
-function PopUpWindow(props) {
+function PopUpWindow({ errorText, changeErrorText }) {
     const [popUpOn, setPopUpOn] = useState();
-    const [innerErrorText, setInnerErrorText] = useState();
 
     function hidePopUpWindow() {
         setPopUpOn(false);
-        setInnerErrorText(null);
+        changeErrorText(null);
     }
 
     useEffect(() => {
-        if (props.errorText !== null) {
-            setInnerErrorText(props.errorText);
+        if (errorText !== null) {
             setPopUpOn(true);
         }
-    }, [props.errorText])
+    }, [errorText])
 
     return (
         <div
@@ -30,7 +28,8 @@ function PopUpWindow(props) {
                 }}>
                 <FontAwesomeIcon icon={faXmark} />
             </button>
-            <div className="flex items-center justify-center text-2xl text-red-500 bg-white rounded shadow-xl w-1/2 h-1/2">{innerErrorText}</div>
+            <div className="flex items-center justify-center text-2xl text-red-500 bg-white rounded shadow-xl w-3/4 h-3/4 p-4">
+                {errorText}</div>
         </div>
     )
 }

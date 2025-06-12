@@ -17,7 +17,7 @@ function CreateBlog() {
 
     return (
         <form>
-            <PopUpWindow errorText={errorText} />
+            <PopUpWindow errorText={errorText} changeErrorText={setErrorText} />
             <SectionHeading heading="Create a New Blog" />
             <div className="grid xl:grid-cols-12 gap-6">
                 {/* Editor Column */}
