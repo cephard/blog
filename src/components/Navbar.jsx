@@ -16,7 +16,7 @@ function Navbar() {
     return (
         <nav className="fixed z-10 bg-transparent backdrop-blur py-4 w-full mx-auto shadow-sm">
             <div className='container max-md:w-full flex items-center justify-between'>
-                <Link to="/" className='flex text-xl sm:text-2xl md:text-3xl font-bold'>
+                <Link to="/" className='flex text-xl sm:text-2xl font-bold'>
                     {/**
                      * <img src="./setgetlogo.png" alt="Logo" className="h-6 self-center-safe" />
                      */}

@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowRight, faSpinner } from '@fortawesome/free-solid-svg-icons';
+import { faArrowRight, faSpinner, faHeart } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router';
 import SectionHeading from './SectionHeading';
 import { useState, useEffect } from 'react';
@@ -44,8 +44,10 @@ function Blogs({ foundBlogs }) {
             <div className="grid md:grid-cols-3 gap-x-4 gap-y-8 justify-center">
                 {blogs.map(blog => (
                     <Link key={blog.id} to={`/blogpost/${blog.id}`} state={{ blog }}>
-                        <div className='card border border-gray-300 shadow-gray-300 shadow-md rounded-lg overflow-hidden h-full  transition-all duration-300 ease-in-out hover:border-blue-300 hover:shadow-md hover:shadow-blue-300'>
+                        <div className='relative card border border-gray-300 shadow-gray-300 shadow-md rounded-lg overflow-hidden h-full  transition-all duration-300 ease-in-out hover:border-blue-300 hover:shadow-md hover:shadow-blue-300'>
                             <img src={blog.imageURL} alt={blog.title} className='w-full h-64 object-cover' />
+                            <FontAwesomeIcon icon={faHeart}
+                                className='absolute right-0 top-0 p-2 m-2 border rounded-full border-violet-600 text-gray-100 hover:border-blue-600 hover:text-red-600 transition-all duration-200' />
                             <div className='px-6 py-4'>
                                 <h1 className='font-bold text-xl mb-4 text-gray-600'>{blog.title}</h1>
                                 <p className='text-gray-500'>{blog.description}</p>
