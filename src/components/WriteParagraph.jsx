@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react"
-import MinimalButton from "./MinimalButton.Jsx";
+import MinimalButton from "./MinimalButton.jsx";
 
 function WriteParagraph() {
     const [activeParagragh, setActiveParagragh] = useState('');
