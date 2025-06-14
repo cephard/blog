@@ -28,14 +28,14 @@ function Navbar() {
                         <Link to={item.path} key={item.label}
                             className="hover:text-white lg:hover:text-violet-600 max-lg:py-8 max-lg:hover:bg-violet-600 max-lg:w-full transition-all duration-300 max-lg:px-16">
                             {item.label}
-                            {<hr className='xl:hidden' />}
+                            {<hr className='lg:hidden' />}
                         </Link>
                     ))}
 
                 </ul>
                 <div className='flex gap-2 items-center'>
                     <Link to="contact" className="inline-flex items-center justify-center rounded-full border border-violet-600 px-2 py-0.5 hover:bg-violet-600 hover:text-zinc-50 transition-colors duration-200">CONTACT</Link>
-                    <button onClick={() => setIsOpen(!isOpen)} className="xl:hidden ml-4 text-2xl cursor-pointer text-violet-800 hover:text-violet-600 z-10" >
+                    <button onClick={() => setIsOpen(!isOpen)} className="lg:hidden ml-4 text-2xl cursor-pointer text-violet-800 hover:text-violet-600 z-10" >
                         <FontAwesomeIcon icon={isOpen ? faX : faBars} />
                     </button>
                 </div>

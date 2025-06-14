@@ -8,7 +8,7 @@ function Footer() {
                     <p className="mb-6 font-light text-sm max-lg:text-center">
                         &copy; 2025 Cephard Kipkemboi. <br />All right reserved.
                     </p>
-                    <hr className="w-[90%]" />
+                    <hr className="max-w-[80%] max-lg:w-full" />
                 </div>
                 <ul className="space-y-2">
                     <h1 className="font-bold">Progamming</h1>

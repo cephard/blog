@@ -47,6 +47,7 @@ function Blogs({ foundBlogs }) {
                         <div className='relative card border border-gray-300 shadow-gray-300 shadow-md rounded-lg overflow-hidden h-full  transition-all duration-300 ease-in-out hover:border-blue-300 hover:shadow-md hover:shadow-blue-300'>
                             <img src={blog.imageURL} alt={blog.title} className='w-full h-64 object-cover' />
                             <FontAwesomeIcon icon={faHeart}
+                                onClick={() => { console.log('clikced') }}
                                 className='absolute right-0 top-0 p-2 m-2 border rounded-full border-violet-600 text-gray-100 hover:border-blue-600 hover:text-red-600 transition-all duration-200' />
                             <div className='px-6 py-4'>
                                 <h1 className='font-bold text-xl mb-4 text-gray-600'>{blog.title}</h1>

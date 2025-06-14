@@ -1,8 +1,9 @@
+import { useState } from "react";
+import { useNavigate } from "react-router";
 import FeaturedImage from "./FeaturedImage";
 import WriteParagraph from "./WriteParagraph";
 import SectionHeading from "./SectionHeading";
 import BlogDetails from "./BlogDetails";
-import { useState } from "react";
 import axios from "axios";
 import PopUpWindow from "./PopUpWindow";
 
@@ -14,6 +15,7 @@ function CreateBlog() {
     const [content, setContent] = useState('content');
     const [errorText, setErrorText] = useState(null);
     const baseUrl = import.meta.env.VITE_API_BASE_URL;
+    const pageReload = useNavigate();
 
     return (
         <form>
@@ -44,6 +46,7 @@ function CreateBlog() {
                                 tags: tags,
                                 content: content
                             })
+                            pageReload('/BlogPost')
                         }
                     }
                     className="rounded-full hover:bg-violet-600 px-4 py-2 border border-violet-600 delay-100 ease-in-out hover:text-white">Upload</button>
