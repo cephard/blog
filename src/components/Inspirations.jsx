@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch, faLightbulb, faStream, faGears, faPeopleGroup } from "@fortawesome/free-solid-svg-icons"
-import inspirations from '../data/myinspirations.json'
+//import inspirations from '../data/myinspirations.json'
 import SectionHeading from './SectionHeading';
 
 
@@ -17,6 +17,33 @@ function Inspirations() {
         setActiveTrait(inspirationId);
         setmessage(inspirationMessage)
     }
+
+    const inspirations = [
+        {
+            "id": 1,
+            "name": "Curiosity",
+            "icon": "faSearch",
+            "message": "To be curious is to question uncertainities and find cause an effect"
+        },
+        {
+            "id": 2,
+            "name": "Innovation",
+            "icon": "faLightbulb",
+            "message": "We strive to invent and build from uncertainity but from our immagination"
+        },
+        {
+            "id": 3,
+            "name": "Simplicity",
+            "icon": "faStream",
+            "message": "We don not need to over engineer, instead we solve problems with our inventions"
+        },
+        {
+            "id": 4,
+            "name": "Cohession",
+            "icon": "faPeopleGroup",
+            "message": "No man is an island so we join forces and a work hand in hand as a community"
+        }
+    ];
 
     return (
         <section>
