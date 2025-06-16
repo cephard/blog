@@ -14,7 +14,7 @@ import Inspirations from './components/Inspirations'
 function App() {
 
   return (
-    <BrowserRouter basename='/blog'>
+    <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Hero />} />
