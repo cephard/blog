@@ -1,5 +1,5 @@
-import { useState, useEffect } from "react"
-import MinimalButton from "./MinimalButton.jsx";
+import { useState, useEffect } from "react";
+import MinimalButton from './MinimalButton';
 
 function WriteParagraph() {
     const [activeParagragh, setActiveParagragh] = useState('');
@@ -30,8 +30,8 @@ function WriteParagraph() {
                 <span className="whitespace-pre-wrap break-all"
                     dangerouslySetInnerHTML={{ __html: formatTextWithLineBreaks(paragraph) }} ></span> {/**Formats plain text to html */}
                 <div className="py-2 flex justify-end">
-                    <MinimalButton name="Edit" primary="text-violet-600" bg="bg-violet-50 " />
-                    <MinimalButton name="Delete" primary="text-red-600" bg="bg-red-50"
+                    <MinimalButton name="Edit" primary="text-violet-600 hover:bg-violet-100" />
+                    <MinimalButton name="Delete" primary="text-red-600 hover:bg-red-100"
                         onClick={() => {
                             setActiveParagragh('')
                         }} />
@@ -49,8 +49,8 @@ function WriteParagraph() {
                     className="border w-full h-[25vh] outline-none focus:border-violet-400 rounded p-2"></textarea>
 
                 <div className="py-2 flex justify-end">
-                    <MinimalButton name="Edit" primary="text-violet-600" bg="bg-violet-50 " />
-                    <MinimalButton name="Clear" primary="text-gray-600" bg="bg-gray-50" clickEvent={() => setActiveParagragh('')} />
+                    <MinimalButton name="Edit" primary="text-violet-600 hover:bg-violet-100 " />
+                    <MinimalButton name="Clear" primary="text-gray-600 hover:bg-gray-100" clickEvent={() => setActiveParagragh('')} />
                 </div>
             </div>
         </div>
