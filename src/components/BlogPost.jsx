@@ -37,6 +37,12 @@ function BlogPost() {
     if (!blog) return <div> Blog Not Found!</div>;
     if (error) return <div className='text-red-500 text-2xl p-4 flex w-full justify-center'>Error : {error}</div>;
 
+    //replace the new line with a break
+    const formatTextWithLineBreaks = (str) => {
+        return str.replace(/\n/g, "<br />");
+    };
+
+
     return (
         <div>
             <h1 className='blog-heading'>{blog.title}</h1>
@@ -55,7 +61,10 @@ function BlogPost() {
                 ))}
             </div>
             <p className='base-text'>
-                {blog.content}
+
+                {console.log(blog.content)}
+                <span className="whitespace-pre-wrap break-all"
+                    dangerouslySetInnerHTML={{ __html: formatTextWithLineBreaks(blog.content) }} ></span> {/**Formats plain text to html */}
             </p>
         </div>
     )

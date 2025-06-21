@@ -1,14 +1,16 @@
 import { useState, useEffect } from "react";
 import MinimalButton from './MinimalButton';
 
-function WriteParagraph() {
+function WriteParagraph({ changeParagraph }) {
     const [activeParagragh, setActiveParagragh] = useState('');
     const [paragraph, setParagraph] = useState('');
 
     //setting the paragrapgh to display what is being typed 
     useEffect(() => {
         const timer = setTimeout(() => {
-            setParagraph(activeParagragh)
+            setParagraph(activeParagragh);
+            changeParagraph(paragraph);
+            console.log(paragraph);
         }, 1000)
         return () => clearTimeout(timer);
     }, [activeParagragh]

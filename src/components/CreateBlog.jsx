@@ -39,7 +39,7 @@ function CreateBlog() {
                 {/* Editor Column */}
                 <div className="xl:col-span-8 space-y-6">
                     <h1 className="text-lg font-semibold">Draft Blog</h1>
-                    <WriteParagraph />
+                    <WriteParagraph changeParagraph={setContent} />
                 </div>
                 {/* Sidebar Column */}
                 <div className="xl:col-span-4 space-y-6">
@@ -61,6 +61,7 @@ function CreateBlog() {
                                 tags: tags,
                                 content: content
                             })
+                            console.log(content);
 
                             pageReload('/BlogPost')
                         }
