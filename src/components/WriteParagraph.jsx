@@ -49,7 +49,7 @@ function WriteParagraph({ changeParagraph }) {
                         setActiveParagragh(event.target.value);
                         changeParagraph(event.target.value)
                     }}
-                    className="border w-full h-[25vh] outline-none focus:border-violet-400 rounded p-2"></textarea>
+                    className="border w-full h-[50vh] outline-none focus:border-violet-400 rounded p-2"></textarea>
 
                 <div className="py-2 flex justify-end">
                     <MinimalButton name="Edit" primary="text-violet-600 hover:bg-violet-100 " />

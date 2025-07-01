@@ -12,7 +12,6 @@ function BlogDetails({ changeTitle, changeDescription, changeTags, changeErrorTe
         }
         if (!tags.includes(neWTag)) {
             setTags([...tags, neWTag])
-            changeTags(tags)
         } else {
             changeErrorText("tag exists")
             return;
@@ -54,7 +53,7 @@ function BlogDetails({ changeTitle, changeDescription, changeTags, changeErrorTe
                             event.target.value = '';
                         }
                     }}
-                    onChange={() => changeTags(tags)}
+                    onChange={changeTags(tags)}
                     className="flex-1 border border-gray-300 rounded px-3 py-2 focus:outline-none focus:border-violet-600"
                 />
                 <div className="flex space-x-2">

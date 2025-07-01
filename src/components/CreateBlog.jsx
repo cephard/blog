@@ -54,13 +54,12 @@ function CreateBlog() {
             <FeaturedImage changeSelectedImage={setSelectedImage} />
             <div className="grid xl:grid-cols-12 gap-6">
                 {/* Editor Column */}
-                <div className="xl:col-span-8 space-y-6">
+                <div className="xl:col-span-8 space-y-6 h-full">
                     <h1 className="text-lg font-semibold">Draft Blog</h1>
                     <WriteParagraph changeParagraph={setContent} />
-
                 </div>
                 {/* Sidebar Column */}
-                <div className="xl:col-span-4 space-y-6">
+                <div className="xl:col-span-4 space-y-6 h-full">
                     <h1 className="text-lg font-semibold">Assets</h1>
                     <BlogDetails changeTitle={setTitle} changeDescription={setDescription} changeTags={setTags}
                         changeErrorText={setErrorText} />
