@@ -23,7 +23,7 @@ function Hero() {
     transform transition-all duration-300">
                     Develope and Explore!
                 </h1>
-                <p className='font-light px-4'>Be inspired by the words of a developer that never quits trying.</p>
+                <p className='font-light px-4'>Be inspired by the data that transforms your business.</p>
                 <div className="relative flex rounded-full border border-violet-200 overflow-hidden focus-within:border-violet-400 transition-colors duration-200">
                     <input
                         className="py-2 px-4 bg-transparent outline-none focus:ring-0"

@@ -49,19 +49,16 @@ function Inspirations() {
         <section>
             <SectionHeading heading="Inspiration" />
             <div className="relative grid lg:grid-cols-2 w-full gap-4">
-                <div className="grid gap-4">
+                <div className="grid gap-4 ">
                     <span>
-                        I have always been fascinated with the world of technology. It didn’t start with fancy gaming laptops or custom-made CPUs with water cooling systems, or thousand-dollar NVIDIA GPUs with CUDA chips.
-                        It all began with math. Yes, the good old-fashioned pen-and-paper calculations of BODMAS. I know some call it PEMDAS, but you get the gist, don’t you?
+                        When expressing your thoughts on this platform, do not be constrained by your fears.
+                        As from time to time we face imposter syndrom, we need to remember that we are just as good as we belive our abilities can rationally be.
                     </span>
                     <span>
-                        In my country, the most unpopular teach ws the mathematic teachers, weather they are going abover and beond or just idol, I leave it to with your immagination. All I know is they sacrifices those teachers made were worth it.
-                        Dont get me wrong my English teacher was my favourite 'bless his soul' but the mark the math teacher left on me never faded.
+                        To keep you cracking on we have deviced a set of rational traits to be flagposted for inspiration and motivation.
                     </span>
-                    <span>
-                        I draw my inspiration and motivation from their character of intensive revisons, early and late night assignements with unrealistic expectations from studens. Kinda sounds like the leaderships principles from I studies for my interview roud that I field missearbly.
-                        So I deviced my own set of blueprint of what makes me a role model and stand out from the rest.
-                    </span>
+
+
                 </div>
                 <div className="my-4 w-full grid relative place-items-center">
                     <ul className="w-full top-[-10%] lg:absolute space-y-5 md:text-xl text-zinc-600 flex justify-around gap-4
@@ -78,7 +75,7 @@ function Inspirations() {
                                 </span> </button>
                             ))}
                     </ul>
-                    <div className='rounded-2xl shadow-md bg-white p-8 w-full h-full flex text-center items-center'>
+                    <div className='rounded-2xl shadow-md bg-white p-8 w-full h-full flex text-center items-center min-h-80'>
                         <span className="bg-gradient-to-r from-violet-500 to-blue-500 font-bold text-2xl bg-clip-text text-transparent drop-shadow drop-shadow-gray-200">{message}</span>
                     </div>
                 </div>

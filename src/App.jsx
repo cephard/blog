@@ -10,6 +10,8 @@ import NoPage from './components/NoPage'
 import CreateBlog from './components/CreateBlog'
 import Contact from './components/Contact'
 import Inspirations from './components/Inspirations'
+import Dashboard from './components/Dashboard'
+import SignIn from './components/SignIn'
 
 function App() {
 
@@ -21,6 +23,8 @@ function App() {
           <Route path="blogs" element={<Blogs />} />
           <Route path="inspirations" element={<Inspirations />} />
           <Route path="contact" element={<Contact />} />
+          <Route path="dashboard" element={<Dashboard />} />
+          <Route path="signin" element={<SignIn />} />
           <Route path="createblog" element={<CreateBlog />} />
           <Route path="blogpost/:id" element={<BlogPost />} />
         </Route>
