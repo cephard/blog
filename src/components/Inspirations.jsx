@@ -51,8 +51,8 @@ function Inspirations() {
             <div className="relative grid lg:grid-cols-2 w-full gap-4">
                 <div className="grid gap-4">
                     <span>
-                        I have always been fascinate with the would of technology. It never started with fancy gaming laptops or custom made cpus with water cooling systems and
-                        thousand dollar nvdia gpu with cuda chips. It all started with maths. Yes, the good all fashion pen and paper calculatios of BODMAS.I know some call it PEMDAS but you ge the gist do't you.
+                        I have always been fascinated with the world of technology. It didn’t start with fancy gaming laptops or custom-made CPUs with water cooling systems, or thousand-dollar NVIDIA GPUs with CUDA chips.
+                        It all began with math. Yes, the good old-fashioned pen-and-paper calculations of BODMAS. I know some call it PEMDAS, but you get the gist, don’t you?
                     </span>
                     <span>
                         In my country, the most unpopular teach ws the mathematic teachers, weather they are going abover and beond or just idol, I leave it to with your immagination. All I know is they sacrifices those teachers made were worth it.

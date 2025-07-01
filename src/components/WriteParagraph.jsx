@@ -9,8 +9,7 @@ function WriteParagraph({ changeParagraph }) {
     useEffect(() => {
         const timer = setTimeout(() => {
             setParagraph(activeParagragh);
-            changeParagraph(paragraph);
-            console.log(paragraph);
+            //changeParagraph(paragraph);
         }, 1000)
         return () => clearTimeout(timer);
     }, [activeParagragh]
@@ -28,7 +27,7 @@ function WriteParagraph({ changeParagraph }) {
             {/**
          * Component that diplays each paragrph of a blog post 
          */}
-            <div className="bg-white shadow rounded border-gray-300 p-4">
+            <div className="bg-white shadow rounded border-gray-300 p-4 hidden">
                 <span className="whitespace-pre-wrap break-all"
                     dangerouslySetInnerHTML={{ __html: formatTextWithLineBreaks(paragraph) }} ></span> {/**Formats plain text to html */}
                 <div className="py-2 flex justify-end">
@@ -40,14 +39,16 @@ function WriteParagraph({ changeParagraph }) {
                 </div>
             </div>
 
-
             <div className="bg-white shadow rounded border-gray-300 p-4">
                 <h1 className="text-lg font-bold pb-4">Write Paragraph</h1>
                 <textarea name="" id=""
                     value={activeParagragh}
 
                     //determines the state and value of the text area prevents it fro recursively changing
-                    onChange={(event) => setActiveParagragh(event.target.value)}
+                    onChange={(event) => {
+                        setActiveParagragh(event.target.value);
+                        changeParagraph(event.target.value)
+                    }}
                     className="border w-full h-[25vh] outline-none focus:border-violet-400 rounded p-2"></textarea>
 
                 <div className="py-2 flex justify-end">

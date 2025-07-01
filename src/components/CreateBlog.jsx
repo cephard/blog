@@ -19,6 +19,7 @@ function CreateBlog() {
     const pageReload = useNavigate();
 
 
+
     //uploads image to cloudinary and return back the https url to be assigned to a blog
     const uploadImage = async () => {
         const cloudImage = new FormData()
@@ -30,8 +31,24 @@ function CreateBlog() {
         return response.data.secure_url;
     }
 
+    const uploadBlog = async (event) => {
+        event.preventDefault();
+        const cloudinaryURL = await uploadImage();
+
+
+        await axios.post(`${baseUrl}/blogposts`, {
+            title: title,
+            description: description,
+            imageURL: cloudinaryURL,
+            tags: tags,
+            content: content
+        })
+
+        pageReload('/BlogPost')
+    }
+
     return (
-        <form>
+        <form onSubmit={uploadBlog}>
             <PopUpWindow errorText={errorText} changeErrorText={setErrorText} />
             <SectionHeading heading="Create a New Blog" />
             <FeaturedImage changeSelectedImage={setSelectedImage} />
@@ -40,6 +57,7 @@ function CreateBlog() {
                 <div className="xl:col-span-8 space-y-6">
                     <h1 className="text-lg font-semibold">Draft Blog</h1>
                     <WriteParagraph changeParagraph={setContent} />
+
                 </div>
                 {/* Sidebar Column */}
                 <div className="xl:col-span-4 space-y-6">
@@ -49,23 +67,7 @@ function CreateBlog() {
                 </div>
             </div>
             <div className="flex w-full p-4 mt-4 items-center justify-center">
-                <button
-                    onClick={
-                        async (event) => {
-                            event.preventDefault();
-                            const cloudinaryURL = await uploadImage();
-                            await axios.post(`${baseUrl}/blogposts`, {
-                                title: title,
-                                description: description,
-                                imageURL: cloudinaryURL,
-                                tags: tags,
-                                content: content
-                            })
-                            console.log(content);
-
-                            pageReload('/BlogPost')
-                        }
-                    }
+                <button type="submit"
                     className="rounded-full hover:bg-violet-600 px-4 py-2 border border-violet-600 delay-100 ease-in-out hover:text-white">
                     Upload</button>
             </div>

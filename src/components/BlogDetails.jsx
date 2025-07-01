@@ -12,6 +12,7 @@ function BlogDetails({ changeTitle, changeDescription, changeTags, changeErrorTe
         }
         if (!tags.includes(neWTag)) {
             setTags([...tags, neWTag])
+            changeTags(tags)
         } else {
             changeErrorText("tag exists")
             return;
@@ -48,8 +49,8 @@ function BlogDetails({ changeTitle, changeDescription, changeTags, changeErrorTe
                     onKeyDown={(event) => {
                         if (event.key === 'Enter') {
                             event.preventDefault();
-                            const neWTag = event.target.value.trim();
-                            handleNewTag(neWTag);
+                            //const neWTag = event.target.value.trim();
+                            handleNewTag(event.target.value.trim());
                             event.target.value = '';
                         }
                     }}
