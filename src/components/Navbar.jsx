@@ -38,7 +38,7 @@ function Navbar() {
                     <Link to={'/signin'}>
                         <FontAwesomeIcon icon={faUser} />
                     </Link>
-                    <button onClick={() => setIsOpen(!isOpen)} className="lg:hidden ml-4 text-2xl cursor-pointer text-violet-800 hover:text-violet-600 z-10" >
+                    <button onClick={() => setIsOpen(!isOpen)} className="lg:hidden ml-4 text-xl cursor-pointer text-violet-800 hover:text-violet-600 z-10" >
                         <FontAwesomeIcon icon={isOpen ? faX : faBars} />
                     </button>
                 </div>

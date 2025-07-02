@@ -49,7 +49,7 @@ function Inspirations() {
         <section>
             <SectionHeading heading="Inspiration" />
             <div className="relative grid lg:grid-cols-2 w-full gap-4">
-                <div className="grid gap-4 ">
+                <div className="flex flex-col justify-center space-y-4">
                     <span>
                         When expressing your thoughts on this platform, do not be constrained by your fears.
                         As from time to time we face imposter syndrom, we need to remember that we are just as good as we belive our abilities can rationally be.
@@ -57,8 +57,6 @@ function Inspirations() {
                     <span>
                         To keep you cracking on we have deviced a set of rational traits to be flagposted for inspiration and motivation.
                     </span>
-
-
                 </div>
                 <div className="my-4 w-full grid relative place-items-center">
                     <ul className="w-full top-[-10%] lg:absolute space-y-5 md:text-xl text-zinc-600 flex justify-around gap-4
